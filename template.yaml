@@ -1,0 +1,77 @@
+organization: OMRON SINIC X
+twitter: "@omron_sinicx"
+title: "LfDT: Learning Dual-Arm Manipulation from Demonstration Translated from a Human and Robotic Arm"
+conference: Humanoids2023
+resources:
+  paper: https://www.researchgate.net/publication/375375521_LfDT_Learning_Dual-Arm_Manipulation_from_Demonstration_Translated_from_a_Human_and_Robotic_Arm
+  # code: https://github.com/omron-sinicx/multipolar
+  video: https://www.youtube.com/embed/vpS7ap1cGAk
+  # blog: https://medium.com/sinicx/multipolar-multi-source-policy-aggregation-for-transfer-reinforcement-learning-between-diverse-bc42a152b0f5
+description: present a multi-modal robotic grinding system that utilizes both audio and visual feedback
+image: https://omron-sinicx.github.io/lfdt/assets/teaser.png
+url: https://omron-sinicx.github.io/lfdt
+speakerdeck: null
+authors:
+  - name: Masato Kobayashi*
+    affiliation: [1]
+    url: https://mertcookimg.github.io/en/
+    position: intern
+  - name: Jun Yamada*
+    affiliation: [2]
+    url: https://junjungoal.github.io/
+    position: intern
+  - name: Masashi Hamaya
+    affiliation: [3]
+    position: senior researcher
+    url: https://sites.google.com/view/masashihamaya/home
+  - name: Kazutoshi Tanaka
+    affiliation: [3]
+    position: senior researcher
+    url: https://kazutoshi-tanaka.github.io/pages/index_eng.html
+contact_ids: [3] #=> 2nd author
+affiliations:
+  - Osaka University
+  - University of Oxford
+  - OMRON SINIC X Corporation
+meta: 
+  - "* work done as an intern at OMRON SINIC X."
+bibtex: >
+  @inproceedings{kobayashi2023learning,
+    title={LfDT: Learning Dual-Arm Manipulation from Demonstration Translated from a Human and Robotic Arm},
+    author={Kobayashi, Masato and Jun, Yamada and Hamaya, Masashi and Tanaka, Kazutoshi},
+    booktitle={The IEEE-RAS International Conference on Humanoid Robots (Humanoids)},
+    year={2023}
+  }
+overview: >
+  This paper proposes LfDT, a new imitation learning framework, for learning dual-arm robotic manipulation. The key idea is to collect demonstrations by having one human use their own arm instead of a robot arm while another expert operates one of the robot arms. This enables human demonstrators to easily collect precise, coordinated demonstrations compared to having a single expert or even two experts operate both robot arms simultaneously because the human arm can easily adjust its position according to the movement of the robot arm during demonstration collections. LfDT then uses a domain translation framework to convert the human-robot demonstrations into equivalent dual-robot demonstrations. This involves training a generator and discriminator using an adversarial loss, as well as using cycle consistency constraints based on learned dynamics models to ensure the translated demonstrations are physically feasible. We evaluated LfDT on simulated 2D pushing tasks as well as real-world dual-arm manipulation tasks. The results showed that LfDT successfully learned coordinated dual-arm manipulation policies from the translated demonstrations and achieved 100% and 80% success rates for Dual-arm block push and Dual-arm peg insertion tasks.
+
+method: null
+  # - title: subsection1
+  #   image: method.png
+  #   text: null
+  # - title: subsection2
+  #   image: null
+  #   text: >
+  #     subsection body 2
+  # - title: null
+  #   image: method.png
+  #   text: >
+  #     subsection body 2
+
+results: null
+# results:
+#   - This is a result description text.
+#   - This is a result1 description text.
+#   - This is a result2 description text.
+#   - This is a result3 description text.
+
+demo: null
+  # - mp4: result1.mp4
+  #   text: demo text1 demo text1 demo text1
+  #   scale: 100%
+  # - mp4: result1.mp4
+  #   text: demo text2 demo text2 demo text2
+  #   scale: 100%
+  # - mp4: result1.mp4
+  #   text: demo text3 demo text3 demo text3
+  #   scale: 80%
